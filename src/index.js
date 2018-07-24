@@ -1,3 +1,4 @@
+import ReconnectingWebSocket from 'ReconnectingWebSocket';
 var createBackoff = require('./backoff').createBackoff;
 
 class WebSocketClient {
@@ -27,7 +28,7 @@ class WebSocketClient {
     // keep binaryType used on previous WebSocket connection
     let binaryType = this.ws && this.ws.binaryType;
 
-    this.ws = new WebSocket(this.url, this.protocols);
+    this.ws = new ReconnectingWebSocket(this.url, this.protocols, {debug: true, reconnectInterval: 3000});
     this.ws.onclose = this.onCloseCallback.bind(this);
     this.ws.onerror = this.onErrorCallback.bind(this);
     this.ws.onmessage = this.onMessageCallback.bind(this);

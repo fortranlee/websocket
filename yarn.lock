@@ -9,6 +9,10 @@ JSONStream@^1.0.3:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
+ReconnectingWebSocket@joewalnes/reconnecting-websocket:
+  version "1.0.1"
+  resolved "https://codeload.github.com/joewalnes/reconnecting-websocket/tar.gz/fd7c819bb15eeee3452c17e317c0a3664c442965"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
